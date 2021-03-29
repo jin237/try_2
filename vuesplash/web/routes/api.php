@@ -5,6 +5,9 @@ use Illuminate\Http\Request;
 // 会員登録
 Route::post('/register', 'Auth\RegisterController@register')->name('register');
 
+// ログインユーザー
+Route::get('/user', fn() => Auth::user())->name('user');
+
 // ログイン
 Route::post('/login', 'Auth\LoginController@login')->name('login');
 
